@@ -10,6 +10,7 @@
 		2798D3991986DFC8007F860B /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D3981986DFC8007F860B /* ProductsViewController.m */; };
 		2798D39C1986E8F7007F860B /* ProductDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39B1986E8F7007F860B /* ProductDto.m */; };
 		2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */; };
+		2798D3A11986FFBA007F860B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2798D3A01986FFB9007F860B /* Images.xcassets */; };
 		CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5E21986E73B001F66E0 /* DetailViewController.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
 		CEB8D0761986B9250000FCD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */; };
@@ -19,7 +20,6 @@
 		CEB8D0841986B9250000FCD4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8D0831986B9250000FCD4 /* AppDelegate.m */; };
 		CEB8D0871986B9250000FCD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8D0851986B9250000FCD4 /* Main.storyboard */; };
 		CEB8D08A1986B9250000FCD4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8D0891986B9250000FCD4 /* ViewController.m */; };
-		CEB8D08C1986B9250000FCD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB8D08B1986B9250000FCD4 /* Images.xcassets */; };
 		CEB8D0931986B9250000FCD4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0921986B9250000FCD4 /* XCTest.framework */; };
 		CEB8D0941986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
 		CEB8D0951986B9250000FCD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0771986B9250000FCD4 /* UIKit.framework */; };
@@ -79,6 +79,7 @@
 		2798D39B1986E8F7007F860B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDto.m; sourceTree = "<group>"; };
 		2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
 		2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		2798D3A01986FFB9007F860B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CEA9B5E11986E73B001F66E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CEA9B5E21986E73B001F66E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB8D0701986B9250000FCD4 /* CafeeManu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeeManu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +95,6 @@
 		CEB8D0861986B9250000FCD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEB8D0881986B9250000FCD4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CEB8D0891986B9250000FCD4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CEB8D08B1986B9250000FCD4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CEB8D0911986B9250000FCD4 /* CafeeManuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeeManuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB8D0921986B9250000FCD4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CEB8D09A1986B9250000FCD4 /* CafeeManuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CafeeManuTests-Info.plist"; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 				2798D3981986DFC8007F860B /* ProductsViewController.m */,
 				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
 				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
-				CEB8D08B1986B9250000FCD4 /* Images.xcassets */,
+				2798D3A01986FFB9007F860B /* Images.xcassets */,
 				CEB8D07A1986B9250000FCD4 /* Supporting Files */,
 			);
 			path = CafeeManu;
@@ -461,7 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB8D08C1986B9250000FCD4 /* Images.xcassets in Resources */,
+				2798D3A11986FFBA007F860B /* Images.xcassets in Resources */,
 				CEB8D07E1986B9250000FCD4 /* InfoPlist.strings in Resources */,
 				CEB8D0871986B9250000FCD4 /* Main.storyboard in Resources */,
 			);
