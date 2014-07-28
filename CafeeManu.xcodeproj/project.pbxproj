@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2798D3991986DFC8007F860B /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D3981986DFC8007F860B /* ProductsViewController.m */; };
+		2798D39C1986E8F7007F860B /* ProductDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39B1986E8F7007F860B /* ProductDto.m */; };
+		2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
 		CEB8D0761986B9250000FCD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */; };
 		CEB8D0781986B9250000FCD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0771986B9250000FCD4 /* UIKit.framework */; };
@@ -69,6 +72,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2798D3971986DFC8007F860B /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
+		2798D3981986DFC8007F860B /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
+		2798D39A1986E8F7007F860B /* ProductDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDto.h; sourceTree = "<group>"; };
+		2798D39B1986E8F7007F860B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDto.m; sourceTree = "<group>"; };
+		2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		CEB8D0701986B9250000FCD4 /* CafeeManu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeeManu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB8D0731986B9250000FCD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -230,6 +239,12 @@
 				CEB8D0851986B9250000FCD4 /* Main.storyboard */,
 				CEB8D0881986B9250000FCD4 /* ViewController.h */,
 				CEB8D0891986B9250000FCD4 /* ViewController.m */,
+				2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */,
+				2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */,
+				2798D39A1986E8F7007F860B /* ProductDto.h */,
+				2798D39B1986E8F7007F860B /* ProductDto.m */,
+				2798D3971986DFC8007F860B /* ProductsViewController.h */,
+				2798D3981986DFC8007F860B /* ProductsViewController.m */,
 				CEB8D08B1986B9250000FCD4 /* Images.xcassets */,
 				CEB8D07A1986B9250000FCD4 /* Supporting Files */,
 			);
@@ -467,11 +482,13 @@
 				CEB8D1131986BBB80000FCD4 /* ServerInterface.m in Sources */,
 				CEB8D0D11986BB980000FCD4 /* SDWebImageManager.m in Sources */,
 				CEB8D0CF1986BB980000FCD4 /* SDWebImageDownloader.m in Sources */,
+				2798D39C1986E8F7007F860B /* ProductDto.m in Sources */,
 				CEB8D1051986BBAC0000FCD4 /* AFURLConnectionOperation.m in Sources */,
 				CEB8D1041986BBAC0000FCD4 /* AFSecurityPolicy.m in Sources */,
 				CEB8D10C1986BBAC0000FCD4 /* UIButton+AFNetworking.m in Sources */,
 				CEB8D10A1986BBAC0000FCD4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				CEB8D10E1986BBAC0000FCD4 /* UIProgressView+AFNetworking.m in Sources */,
+				2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */,
 				CEB8D0D61986BB980000FCD4 /* UIImage+WebP.m in Sources */,
 				CEB8D1021986BBAC0000FCD4 /* AFHTTPSessionManager.m in Sources */,
 				CEB8D0D91986BB980000FCD4 /* UIView+WebCacheOperation.m in Sources */,
@@ -484,6 +501,7 @@
 				CEB8D0D51986BB980000FCD4 /* UIImage+MultiFormat.m in Sources */,
 				CEB8D1011986BBAC0000FCD4 /* AFHTTPRequestOperationManager.m in Sources */,
 				CEB8D1101986BBAC0000FCD4 /* UIWebView+AFNetworking.m in Sources */,
+				2798D3991986DFC8007F860B /* ProductsViewController.m in Sources */,
 				CEB8D0D01986BB980000FCD4 /* SDWebImageDownloaderOperation.m in Sources */,
 				CEB8D1001986BBAC0000FCD4 /* AFHTTPRequestOperation.m in Sources */,
 				CEB8D10F1986BBAC0000FCD4 /* UIRefreshControl+AFNetworking.m in Sources */,
