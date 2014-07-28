@@ -10,6 +10,7 @@
 		2798D3991986DFC8007F860B /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D3981986DFC8007F860B /* ProductsViewController.m */; };
 		2798D39C1986E8F7007F860B /* ProductDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39B1986E8F7007F860B /* ProductDto.m */; };
 		2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */; };
+		CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5E21986E73B001F66E0 /* DetailViewController.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
 		CEB8D0761986B9250000FCD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */; };
 		CEB8D0781986B9250000FCD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0771986B9250000FCD4 /* UIKit.framework */; };
@@ -78,6 +79,8 @@
 		2798D39B1986E8F7007F860B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDto.m; sourceTree = "<group>"; };
 		2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
 		2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		CEA9B5E11986E73B001F66E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CEA9B5E21986E73B001F66E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB8D0701986B9250000FCD4 /* CafeeManu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeeManu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB8D0731986B9250000FCD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -245,6 +248,8 @@
 				2798D39B1986E8F7007F860B /* ProductDto.m */,
 				2798D3971986DFC8007F860B /* ProductsViewController.h */,
 				2798D3981986DFC8007F860B /* ProductsViewController.m */,
+				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
+				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
 				CEB8D08B1986B9250000FCD4 /* Images.xcassets */,
 				CEB8D07A1986B9250000FCD4 /* Supporting Files */,
 			);
@@ -515,6 +520,7 @@
 				CEB8D0D81986BB980000FCD4 /* UIImageView+WebCache.m in Sources */,
 				CEB8D0CD1986BB980000FCD4 /* SDWebImageCompat.m in Sources */,
 				CEB8D0D41986BB980000FCD4 /* UIImage+GIF.m in Sources */,
+				CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */,
 				CEB8D10D1986BBAC0000FCD4 /* UIImageView+AFNetworking.m in Sources */,
 				CEB8D0801986B9250000FCD4 /* main.m in Sources */,
 				CEB8D1171986BC280000FCD4 /* Constants.m in Sources */,
