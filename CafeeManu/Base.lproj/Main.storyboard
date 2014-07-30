@@ -290,7 +290,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
-                                <state key="normal" image="language.png">
+                                <state key="normal" image="language">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -298,7 +298,7 @@
                                 <rect key="frame" x="128" y="860" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.442582111" green="0.069045381000000003" blue="0.29099577760000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="feedback.png">
+                                <state key="normal" image="feedback">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -306,7 +306,7 @@
                                 <rect key="frame" x="20" y="860" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.442582111" green="0.069045381000000003" blue="0.29099577760000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="information.png">
+                                <state key="normal" image="information">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -331,11 +331,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="JlM-ie-zgh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JlM-ie-zgh">
                                 <rect key="frame" x="33" y="63" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-i7-Ska">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZXG-i7-Ska">
                                 <rect key="frame" x="508" y="832" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -356,11 +356,11 @@
     </scenes>
     <resources>
         <image name="calories" width="732" height="382"/>
-        <image name="feedback.png" width="70" height="57"/>
+        <image name="feedback" width="70" height="57"/>
         <image name="harisa" width="1024" height="768"/>
-        <image name="information.png" width="27" height="64"/>
-        <image name="language.png" width="63" height="63"/>
-        <image name="logo.png" width="200" height="43"/>
+        <image name="information" width="27" height="64"/>
+        <image name="language" width="63" height="63"/>
+        <image name="logo" width="200" height="43"/>
         <image name="minutes" width="512" height="512"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
