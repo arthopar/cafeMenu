@@ -76,14 +76,22 @@
                     <view key="view" contentMode="scaleToFill" id="Fmw-os-4Wk">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzq-bm-VSv">
+                                <rect key="frame" x="379" y="513" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rWC-0t-mwy" kind="modal" id="psx-qj-zgY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hfe-7x-2g6">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="lG5-Ec-WFR">
-                            <connections>
-                                <segue destination="rWC-0t-mwy" kind="push" id="d7y-3M-Zr9"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="lG5-Ec-WFR"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uya-9f-NPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="langugage.png" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-Bf-fbu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harisa" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-Bf-fbu">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="512"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
@@ -349,9 +357,9 @@
     <resources>
         <image name="calories" width="732" height="382"/>
         <image name="feedback.png" width="70" height="57"/>
+        <image name="harisa" width="1024" height="768"/>
         <image name="information.png" width="27" height="64"/>
         <image name="language.png" width="63" height="63"/>
-        <image name="langugage.png" width="1024" height="768"/>
         <image name="logo.png" width="200" height="43"/>
         <image name="minutes" width="512" height="512"/>
     </resources>
