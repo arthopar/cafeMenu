@@ -81,8 +81,8 @@
 /* Begin PBXFileReference section */
 		2798D3971986DFC8007F860B /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
 		2798D3981986DFC8007F860B /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
-		2798D39A1986E8F7007F860B /* ProductDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDto.h; sourceTree = "<group>"; };
-		2798D39B1986E8F7007F860B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDto.m; sourceTree = "<group>"; };
+		2798D39A1986E8F7007F860B /* ProductDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductDto.h; path = CafeeManu/ProductDto.h; sourceTree = "<group>"; };
+		2798D39B1986E8F7007F860B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductDto.m; path = CafeeManu/ProductDto.m; sourceTree = "<group>"; };
 		2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
 		2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		2798D3A01986FFB9007F860B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -212,6 +212,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEA13C13198987E9006C96C1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2798D39A1986E8F7007F860B /* ProductDto.h */,
+				2798D39B1986E8F7007F860B /* ProductDto.m */,
+			);
+			name = model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		CEA13C1419898806006C96C1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */,
+				2798D3971986DFC8007F860B /* ProductsViewController.h */,
+				2798D3981986DFC8007F860B /* ProductsViewController.m */,
+				2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		CEA13C151989880D006C96C1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8D0881986B9250000FCD4 /* ViewController.h */,
+				CEB8D0891986B9250000FCD4 /* ViewController.m */,
+				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
+				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
+				9811F6501988447E00F79CE9 /* MainViewController.h */,
+				9811F6511988447E00F79CE9 /* MainViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		CEB8D0671986B9240000FCD4 = {
 			isa = PBXGroup;
 			children = (
@@ -246,8 +280,9 @@
 		CEB8D0791986B9250000FCD4 /* CafeeManu */ = {
 			isa = PBXGroup;
 			children = (
-				9811F6501988447E00F79CE9 /* MainViewController.h */,
-				9811F6511988447E00F79CE9 /* MainViewController.m */,
+				CEA13C151989880D006C96C1 /* controller */,
+				CEA13C1419898806006C96C1 /* view */,
+				CEA13C13198987E9006C96C1 /* model */,
 				CEB8D1151986BC280000FCD4 /* Constants.h */,
 				CEB8D1161986BC280000FCD4 /* Constants.m */,
 				CEB8D1111986BBB80000FCD4 /* ServerInterface.h */,
@@ -255,16 +290,6 @@
 				CEB8D0821986B9250000FCD4 /* AppDelegate.h */,
 				CEB8D0831986B9250000FCD4 /* AppDelegate.m */,
 				CEB8D0851986B9250000FCD4 /* Main.storyboard */,
-				CEB8D0881986B9250000FCD4 /* ViewController.h */,
-				CEB8D0891986B9250000FCD4 /* ViewController.m */,
-				2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */,
-				2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */,
-				2798D39A1986E8F7007F860B /* ProductDto.h */,
-				2798D39B1986E8F7007F860B /* ProductDto.m */,
-				2798D3971986DFC8007F860B /* ProductsViewController.h */,
-				2798D3981986DFC8007F860B /* ProductsViewController.m */,
-				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
-				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
 				9811F65519884A4000F79CE9 /* background.jpg */,
 				9811F65319884A2E00F79CE9 /* logo.png */,
 				9811F6591989725500F79CE9 /* feedback.png */,
