@@ -216,8 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				2798D39D1986ED1D007F860B /* ProductCollectionViewCell.h */,
-				2798D3971986DFC8007F860B /* ProductsViewController.h */,
-				2798D3981986DFC8007F860B /* ProductsViewController.m */,
 				2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */,
 			);
 			name = view;
@@ -226,6 +224,8 @@
 		CEA13C151989880D006C96C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2798D3971986DFC8007F860B /* ProductsViewController.h */,
+				2798D3981986DFC8007F860B /* ProductsViewController.m */,
 				CEB8D0881986B9250000FCD4 /* ViewController.h */,
 				CEB8D0891986B9250000FCD4 /* ViewController.m */,
 				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
