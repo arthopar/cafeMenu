@@ -80,8 +80,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:detailViewController];
-    [self presentViewController:nav animated:YES completion:nil];
+    [self presentViewController:detailViewController animated:YES completion:nil];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
