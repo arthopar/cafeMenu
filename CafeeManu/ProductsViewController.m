@@ -11,12 +11,7 @@
 #import "ProductCollectionViewCell.h"
 #import "DetailViewController.h"
 
-@interface ProductsViewController ()
-{
-    NSMutableArray *_productList;
-}
 
-@end
 
 @implementation ProductsViewController
 

@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnEntree;
 @property (weak, nonatomic) IBOutlet UIButton *btnFeedback;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewProduct;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewProducts;
 
+@property (strong, nonatomic) NSMutableArray *productList;
+
+- (IBAction)backBtnClicked:(id)sender;
 @end

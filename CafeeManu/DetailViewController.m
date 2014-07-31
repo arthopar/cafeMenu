@@ -7,6 +7,9 @@
 //
 
 #import "DetailViewController.h"
+#import "ProductDto.h"
+#import "ProductCollectionViewCell.h"
+#import "ProductsViewController.h"
 
 @interface DetailViewController ()
 
@@ -32,6 +35,8 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
+    
+    _productList = ((ProductsViewController*)[self presentingViewController]).productList;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,5 +55,45 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - UICollectionViewDataSource Methods
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ProductCollectionViewCell *cell = (ProductCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"ProductsCollectionViewCell" forIndexPath:indexPath];
+    
+    ProductDto *currentProductItem = _productList[indexPath.row];
+    
+    //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
+    //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
+    //  [cell.imageView sd_setImageWithURL:imageUrl];
+    //    [cell.imageView setImage:[UIImage imageNamed:currentProductItem.imagePath]];
+    [cell.imageView setImage:[UIImage imageNamed:@"harisa"]];
+    
+    [cell.nameLbl setText:currentProductItem.name];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(260, 240);
+}
+
+- (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [_productList count];
+}
+
+- (IBAction)backBtnClicked:(id)sender
+{
+    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
