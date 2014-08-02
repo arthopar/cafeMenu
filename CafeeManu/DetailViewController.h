@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblMinutes;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 @property (weak, nonatomic) IBOutlet UILabel *lblDescription;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgCalories;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMinutes;
