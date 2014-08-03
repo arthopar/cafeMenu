@@ -12,6 +12,9 @@
 		2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798D39E1986ED1D007F860B /* ProductCollectionViewCell.m */; };
 		2798D3A11986FFBA007F860B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2798D3A01986FFB9007F860B /* Images.xcassets */; };
 		9811F6521988447E00F79CE9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9811F6511988447E00F79CE9 /* MainViewController.m */; };
+		9878C38B198D15A600BEB952 /* LanguagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878C38A198D15A600BEB952 /* LanguagesViewController.m */; };
+		9878C38E198D171100BEB952 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878C38D198D171100BEB952 /* FeedbackViewController.m */; };
+		9878C391198D172500BEB952 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878C390198D172500BEB952 /* InfoViewController.m */; };
 		CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5E21986E73B001F66E0 /* DetailViewController.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
 		CEB8D0761986B9250000FCD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0751986B9250000FCD4 /* CoreGraphics.framework */; };
@@ -82,6 +85,12 @@
 		2798D3A01986FFB9007F860B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9811F6501988447E00F79CE9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		9811F6511988447E00F79CE9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9878C389198D15A600BEB952 /* LanguagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguagesViewController.h; sourceTree = "<group>"; };
+		9878C38A198D15A600BEB952 /* LanguagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguagesViewController.m; sourceTree = "<group>"; };
+		9878C38C198D171100BEB952 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		9878C38D198D171100BEB952 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		9878C38F198D172500BEB952 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		9878C390198D172500BEB952 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		CEA9B5E11986E73B001F66E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CEA9B5E21986E73B001F66E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB8D0701986B9250000FCD4 /* CafeeManu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeeManu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +236,12 @@
 				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
 				9811F6501988447E00F79CE9 /* MainViewController.h */,
 				9811F6511988447E00F79CE9 /* MainViewController.m */,
+				9878C389198D15A600BEB952 /* LanguagesViewController.h */,
+				9878C38A198D15A600BEB952 /* LanguagesViewController.m */,
+				9878C38C198D171100BEB952 /* FeedbackViewController.h */,
+				9878C38D198D171100BEB952 /* FeedbackViewController.m */,
+				9878C38F198D172500BEB952 /* InfoViewController.h */,
+				9878C390198D172500BEB952 /* InfoViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -517,12 +532,16 @@
 				CEB8D1041986BBAC0000FCD4 /* AFSecurityPolicy.m in Sources */,
 				CEB8D10C1986BBAC0000FCD4 /* UIButton+AFNetworking.m in Sources */,
 				CEB8D10A1986BBAC0000FCD4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				9878C38B198D15A600BEB952 /* LanguagesViewController.m in Sources */,
 				CEB8D10E1986BBAC0000FCD4 /* UIProgressView+AFNetworking.m in Sources */,
+				9878C391198D172500BEB952 /* InfoViewController.m in Sources */,
 				2798D39F1986ED1D007F860B /* ProductCollectionViewCell.m in Sources */,
 				CEB8D0D61986BB980000FCD4 /* UIImage+WebP.m in Sources */,
 				CEB8D1021986BBAC0000FCD4 /* AFHTTPSessionManager.m in Sources */,
 				CEB8D0D91986BB980000FCD4 /* UIView+WebCacheOperation.m in Sources */,
 				CEB8D0CC1986BB980000FCD4 /* SDImageCache.m in Sources */,
+				9878C38E198D171100BEB952 /* FeedbackViewController.m in Sources */,
+				CEB8D08A1986B9250000FCD4 /* ViewController.m in Sources */,
 				CEB8D0CA1986BB980000FCD4 /* MKAnnotationView+WebCache.m in Sources */,
 				CEB8D1091986BBAC0000FCD4 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				CEB8D10B1986BBAC0000FCD4 /* UIAlertView+AFNetworking.m in Sources */,
