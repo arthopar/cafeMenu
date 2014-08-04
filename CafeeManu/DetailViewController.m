@@ -7,9 +7,9 @@
 //
 
 #import "DetailViewController.h"
-#import "ProductDto.h"
-#import "ProductCollectionViewCell.h"
-#import "ProductsViewController.h"
+#import "CategoryDto.h"
+#import "CategoryCollectionViewCell.h"
+#import "CategoryViewController.h"
 
 @interface DetailViewController ()
 
@@ -36,7 +36,7 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     
-    _productList = ((ProductsViewController*)[self presentingViewController]).productList;
+    _productList = ((CategoryViewController*)[self presentingViewController]).productList;
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,9 +63,9 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductCollectionViewCell *cell = (ProductCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"ProductsCollectionViewCell" forIndexPath:indexPath];
+    CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    ProductDto *currentProductItem = _productList[indexPath.row];
+    CategoryDto *currentProductItem = _productList[indexPath.row];
     
     //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
     //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];

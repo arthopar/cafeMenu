@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Artak. All rights reserved.
 //
 
-#import "ProductsViewController.h"
-#import "ProductDto.h"
-#import "ProductCollectionViewCell.h"
+#import "CategoryViewController.h"
+#import "CategoryDto.h"
+#import "CategoryCollectionViewCell.h"
 #import "DetailViewController.h"
 
 
 
-@implementation ProductsViewController
+@implementation CategoryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,12 +35,12 @@
     _productList = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 20; ++i) {
-        ProductDto *productCellData = [[ProductDto alloc] init];
+        CategoryDto *productCellData = [[CategoryDto alloc] init];
         productCellData.imagePath = @"entree.png";
         productCellData.name = @"Entree";
         [_productList addObject:productCellData];
     
-        productCellData = [[ProductDto alloc] init];
+        productCellData = [[CategoryDto alloc] init];
         productCellData.imagePath = @"sushi.png";
         productCellData.name = @"Sushi";
         [_productList addObject:productCellData];
@@ -62,9 +62,9 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductCollectionViewCell *cell = (ProductCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"ProductsCollectionViewCell" forIndexPath:indexPath];
+    CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    ProductDto *currentProductItem = _productList[indexPath.row];
+    CategoryDto *currentProductItem = _productList[indexPath.row];
     
     //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
     //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];

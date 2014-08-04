@@ -1,5 +1,5 @@
 //
-//  CategoryCellData.h
+//  CategoryDto.h
 //  Menu
 //
 //  Created by Edvard on 7/4/14.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface ProductDto : NSObject
+@interface CategoryDto : NSObject
 
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) NSString *name;

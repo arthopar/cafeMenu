@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Artak. All rights reserved.
 //
 
-#import "ProductCollectionViewCell.h"
+#import "CategoryCollectionViewCell.h"
 
-@implementation ProductCollectionViewCell
+@implementation CategoryCollectionViewCell
 
 - (instancetype)initWithFrame:(CGRect)frameRect
 {
