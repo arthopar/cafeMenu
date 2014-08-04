@@ -36,7 +36,7 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     
-    _productList = ((CategoryViewController*)[self presentingViewController]).productList;
+    _productList = ((CategoryViewController*)[self presentingViewController]).categoryList;
 }
 
 - (void)didReceiveMemoryWarning

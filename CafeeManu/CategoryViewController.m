@@ -10,7 +10,8 @@
 #import "CategoryDto.h"
 #import "CategoryCollectionViewCell.h"
 #import "DetailViewController.h"
-
+#import "ServerInterface.h"
+#import "Constants.h"
 
 
 @implementation CategoryViewController
@@ -32,20 +33,46 @@
 
 -(void) getCategories
 {
-    _productList = [[NSMutableArray alloc] init];
+    _categoryList = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 20; ++i) {
         CategoryDto *productCellData = [[CategoryDto alloc] init];
         productCellData.imagePath = @"entree.png";
         productCellData.name = @"Entree";
-        [_productList addObject:productCellData];
+        [_categoryList addObject:productCellData];
     
         productCellData = [[CategoryDto alloc] init];
         productCellData.imagePath = @"sushi.png";
         productCellData.name = @"Sushi";
-        [_productList addObject:productCellData];
+        [_categoryList addObject:productCellData];
     }
 }
+
+// TODO Uncomment when the server will be available
+//-(void) getCategories
+//{
+//    _categoryList = [[NSMutableArray alloc] init];
+//    
+//    [ServerInterface requestWithData:@"Category" parameters:nil success:^(id responseObject) {
+//        NSLog(@"JSON: %@", responseObject);
+//        if ([responseObject isKindOfClass:[NSArray class]]) {
+//            NSArray *responseArray = responseObject;
+//            for (NSDictionary *currenCategory in responseArray) {
+//                CategoryDto *currentCellData = [[CategoryDto alloc] init];
+//                currentCellData.imagePath = [currenCategory valueForKey:@"imagePath"];
+//                currentCellData.imagePath = [SERVERROOT stringByAppendingString:currentCellData.imagePath];
+//                currentCellData.name = [currenCategory valueForKey:@"name"];
+//                [_categoryList addObject:currentCellData];
+//            }
+//            [_collectionView reloadData];
+//        } else if ([responseObject isKindOfClass:[NSDictionary class]]) {
+//            //NSDictionary *responseDict = responseObject;
+//            /* do something with responseDict */
+//        }
+//    } failure:^(NSError *error) {
+//        NSLog(@"Error: %@", error);
+//    }];
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -64,7 +91,7 @@
 {
     CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    CategoryDto *currentProductItem = _productList[indexPath.row];
+    CategoryDto *currentProductItem = _categoryList[indexPath.row];
     
     //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
     //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
@@ -88,7 +115,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_productList count];
+    return [_categoryList count];
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,7 +11,7 @@
 @interface CategoryViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSMutableArray *productList;
+@property (strong, nonatomic) NSMutableArray *categoryList;
 
 - (IBAction)backBtnClicked:(id)sender;
 
