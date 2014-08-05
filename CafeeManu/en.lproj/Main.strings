@@ -1,0 +1,45 @@
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "1qd-jQ-bVk"; */
+"1qd-jQ-bVk.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Himar gndikner tomati mathukov"; ObjectID = "5k4-C3-WZj"; */
+"5k4-C3-WZj.text" = "Himar gndikner tomati mathukov";
+
+/* Class = "IBUILabel"; text = "feedback"; ObjectID = "7eR-Vt-lA3"; */
+"7eR-Vt-lA3.text" = "feedback";
+
+/* Class = "IBUIButton"; normalTitle = "Menu"; ObjectID = "JRb-lL-u1U"; */
+"JRb-lL-u1U.normalTitle" = "Menu";
+
+/* Class = "IBUILabel"; text = "info"; ObjectID = "Mmy-p8-809"; */
+"Mmy-p8-809.text" = "info";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "ONy-8l-kaE"; */
+"ONy-8l-kaE.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Add"; ObjectID = "Qiw-v8-w5f"; */
+"Qiw-v8-w5f.normalTitle" = "Add";
+
+/* Class = "IBUIButton"; normalTitle = "Feedback"; ObjectID = "RIC-ba-rbg"; */
+"RIC-ba-rbg.normalTitle" = "Feedback";
+
+/* Class = "IBUILabel"; text = "50 calories"; ObjectID = "Sh4-Nh-DvD"; */
+"Sh4-Nh-DvD.text" = "50 calories";
+
+/* Class = "IBUILabel"; text = "language"; ObjectID = "XcN-Fg-dDM"; */
+"XcN-Fg-dDM.text" = "language";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "YXJ-Xx-yun"; */
+"YXJ-Xx-yun.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Entree"; ObjectID = "cxE-co-iLz"; */
+"cxE-co-iLz.normalTitle" = "Entree";
+
+/* Class = "IBUILabel"; text = "$ 18,00"; ObjectID = "hoB-nv-stb"; */
+"hoB-nv-stb.text" = "$ 18,00";
+
+/* Class = "IBUILabel"; text = "5 minutes"; ObjectID = "qez-X4-91n"; */
+"qez-X4-91n.text" = "5 minutes";
+
+/* Class = "IBUILabel"; text = "Kofta Meatbal Sampler"; ObjectID = "wCp-6W-Sm0"; */
+"wCp-6W-Sm0.text" = "Kofta Meatbal Sampler";
