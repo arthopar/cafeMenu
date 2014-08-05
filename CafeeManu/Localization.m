@@ -33,18 +33,19 @@ static int selectedLanguage;
 	if(selectedLanguage == ENGLISH_LANGUAGE)
 		path = [[NSBundle mainBundle] pathForResource:@"English" ofType:@"lproj"];
 	else if(selectedLanguage == ARMENIAN_LANGUAGE)
-		path = [[NSBundle mainBundle] pathForResource:@"hy" ofType:@"lproj"];
+		path = [[NSBundle mainBundle] pathForResource:[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0]  ofType:@"lproj"];
 	else if(selectedLanguage == RUSSIAN_LANGUAGE)
 		path = [[NSBundle mainBundle] pathForResource:@"ru" ofType:@"lproj"];
 	
 	NSBundle* languageBundle = [NSBundle bundleWithPath:path];
+    [languageBundle load];
 	NSString* str=[languageBundle localizedStringForKey:key value:@"" table:nil];
 	return str;
 }
 
 +(NSDictionary*) getLanguageList
 {
-    return @{@(ARMENIAN_LANGUAGE):@"HAYEREN", @(ENGLISH_LANGUAGE):@"ENGLISH", @(RUSSIAN_LANGUAGE):@"RUSSKI"};
+    return @{@(ARMENIAN_LANGUAGE):@"Հայերեն", @(ENGLISH_LANGUAGE):@"English", @(RUSSIAN_LANGUAGE):@"Русский"};
 }
 
 @end

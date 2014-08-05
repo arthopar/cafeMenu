@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "Localization.h"
 
 @interface MainViewController ()
 
@@ -58,12 +59,21 @@
 
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self setLabels];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+-(void) setLabels
+{
+    _labelLanguage.text = [Localization languageSelectedStringForKey:@"XcN-Fg-dDM.text"];
+}
 /*
 #pragma mark - Navigation
 

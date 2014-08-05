@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnFeedback;
 @property (weak, nonatomic) IBOutlet UIButton *btnInformation;
 
+@property (weak, nonatomic) IBOutlet UILabel *lableInfo;
+@property (weak, nonatomic) IBOutlet UILabel *labelFeedback;
+@property (weak, nonatomic) IBOutlet UILabel *labelLanguage;
 
 @end

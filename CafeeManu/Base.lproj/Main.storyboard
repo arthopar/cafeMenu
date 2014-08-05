@@ -575,6 +575,9 @@
                         <outlet property="btnInformation" destination="Vs8-ll-oeu" id="zLb-4D-m9K"/>
                         <outlet property="btnLanguage" destination="zUX-AG-8L9" id="GzM-oe-Nyn"/>
                         <outlet property="btnMenu" destination="JRb-lL-u1U" id="8SJ-Ne-Q9B"/>
+                        <outlet property="labelFeedback" destination="7eR-Vt-lA3" id="sXX-30-qcC"/>
+                        <outlet property="labelLanguage" destination="XcN-Fg-dDM" id="B8x-Mu-kNK"/>
+                        <outlet property="lableInfo" destination="Mmy-p8-809" id="QEh-Ph-2U9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQa-8E-e8P" userLabel="First Responder" sceneMemberID="firstResponder"/>

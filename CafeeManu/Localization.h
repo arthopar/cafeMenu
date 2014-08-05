@@ -22,4 +22,6 @@ enum
 + (void) setSelectedLanguage:(int)val;
 
 +(NSDictionary*) getLanguageList;
++(NSString*) languageSelectedStringForKey:(NSString*) key;
+
 @end

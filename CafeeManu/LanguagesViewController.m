@@ -8,6 +8,7 @@
 
 #import "LanguagesViewController.h"
 #import "LanguageViewCell.h"
+#import "Localization.h"
 
 @interface LanguagesViewController ()
 
@@ -26,21 +27,22 @@
 
 -(void) getLanguages
 {
+    NSDictionary *lang = [Localization getLanguageList];
     _languages = [[NSMutableArray alloc] init];
     
     CommonDto *languageCellData = [[CommonDto alloc] init];
     languageCellData.imagePath = @"am";
-    languageCellData.name = @"Հայերեն";
+    languageCellData.name = [lang objectForKey:@(ARMENIAN_LANGUAGE)];
     [_languages addObject:languageCellData];
     
     languageCellData = [[CommonDto alloc] init];
     languageCellData.imagePath = @"ru";
-    languageCellData.name = @"Русский";
+    languageCellData.name = [lang objectForKey:@(RUSSIAN_LANGUAGE)];
     [_languages addObject:languageCellData];
     
     languageCellData = [[CommonDto alloc] init];
     languageCellData.imagePath = @"en";
-    languageCellData.name = @"English";
+    languageCellData.name = [lang objectForKey:@(ENGLISH_LANGUAGE)];
     [_languages addObject:languageCellData];
 }
 
@@ -75,6 +77,10 @@
     return [_languages count];
 }
 
+- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [Localization setSelectedLanguage:indexPath.row];
+}
 /*
 #pragma mark - Navigation
 
