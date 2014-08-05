@@ -7,6 +7,7 @@
 //
 
 #import "LanguagesViewController.h"
+#import "LanguageViewCell.h"
 
 @interface LanguagesViewController ()
 
@@ -23,10 +24,30 @@
     return self;
 }
 
+-(void) getLanguages
+{
+    _languages = [[NSMutableArray alloc] init];
+    
+    CommonDto *languageCellData = [[CommonDto alloc] init];
+    languageCellData.imagePath = @"am";
+    languageCellData.name = @"Հայերեն";
+    [_languages addObject:languageCellData];
+    
+    languageCellData = [[CommonDto alloc] init];
+    languageCellData.imagePath = @"ru";
+    languageCellData.name = @"Русский";
+    [_languages addObject:languageCellData];
+    
+    languageCellData = [[CommonDto alloc] init];
+    languageCellData.imagePath = @"en";
+    languageCellData.name = @"English";
+    [_languages addObject:languageCellData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self getLanguages];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,12 +58,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+
+    static NSString *CellIdentifier = @"LanguageViewCell";
+    
+    LanguageViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[LanguageViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    [cell updateWithDto:[_languages objectAtIndex:indexPath.row]];
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [_languages count];
 }
 
 /*

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LanguagesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewLanguage;
+@property (strong, nonatomic) NSMutableArray *languages;
 
 @end

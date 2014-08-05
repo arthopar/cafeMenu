@@ -7,7 +7,7 @@
 //
 
 #import "CategoryViewController.h"
-#import "CategoryDto.h"
+#import "CommonDto.h"
 #import "CategoryCollectionViewCell.h"
 #import "DetailViewController.h"
 #import "ServerInterface.h"
@@ -36,12 +36,12 @@
     _categoryList = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 20; ++i) {
-        CategoryDto *productCellData = [[CategoryDto alloc] init];
+        CommonDto *productCellData = [[CommonDto alloc] init];
         productCellData.imagePath = @"entree.png";
         productCellData.name = @"Entree";
         [_categoryList addObject:productCellData];
     
-        productCellData = [[CategoryDto alloc] init];
+        productCellData = [[CommonDto alloc] init];
         productCellData.imagePath = @"sushi.png";
         productCellData.name = @"Sushi";
         [_categoryList addObject:productCellData];
@@ -91,7 +91,7 @@
 {
     CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    CategoryDto *currentProductItem = _categoryList[indexPath.row];
+    CommonDto *currentProductItem = _categoryList[indexPath.row];
     
     //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
     //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];

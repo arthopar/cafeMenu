@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CategoryDto : NSObject
+@interface CommonDto : NSObject
 
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) NSString *name;

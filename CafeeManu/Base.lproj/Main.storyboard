@@ -398,31 +398,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iDR-do-QJQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iDR-do-QJQ">
                                 <rect key="frame" x="0.0" y="32" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="cKG-Ae-rWr">
-                                        <rect key="frame" x="0.0" y="22" width="768" height="81"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageViewCell" rowHeight="68" id="via-Oa-Moj" customClass="LanguageViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="68"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKG-Ae-rWr" id="GBi-L2-1ma">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="via-Oa-Moj" id="inb-0Q-USB">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kad-cZ-9ld">
-                                                    <rect key="frame" x="20" y="0.0" width="136" height="80"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JB4-Cv-d0O">
+                                                    <rect key="frame" x="10" y="10" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="TF1-02-KTo"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXJ-Xx-yun">
-                                                    <rect key="frame" x="164" y="9" width="604" height="61"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWr-rE-mWF">
+                                                    <rect key="frame" x="68" y="24" width="249" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JB4-Cv-d0O" firstAttribute="top" secondItem="inb-0Q-USB" secondAttribute="top" constant="10" id="UmC-cL-SU4"/>
+                                                <constraint firstItem="tWr-rE-mWF" firstAttribute="leading" secondItem="JB4-Cv-d0O" secondAttribute="trailing" constant="8" symbolic="YES" id="Xpn-we-fnk"/>
+                                                <constraint firstAttribute="bottom" secondItem="JB4-Cv-d0O" secondAttribute="bottom" constant="12" id="csD-aL-XKq"/>
+                                                <constraint firstItem="JB4-Cv-d0O" firstAttribute="leading" secondItem="inb-0Q-USB" secondAttribute="leading" constant="10" id="pP6-6b-U1m"/>
+                                                <constraint firstItem="JB4-Cv-d0O" firstAttribute="centerY" secondItem="tWr-rE-mWF" secondAttribute="centerY" id="sPD-8B-fOq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageViewFlag" destination="JB4-Cv-d0O" id="Pn1-fK-nva"/>
+                                            <outlet property="labelTitle" destination="tWr-rE-mWF" id="w1P-FJ-9hu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -434,7 +448,7 @@
                         <color key="backgroundColor" red="0.86688855229591844" green="0.86688855229591844" blue="0.86688855229591844" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <value key="contentSizeForViewInPopover" type="size" width="300" height="400"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="250" height="300"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
