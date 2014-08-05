@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import "CategoryDto.h"
+#import "CommonDto.h"
 #import "CategoryCollectionViewCell.h"
 #import "CategoryViewController.h"
 
@@ -65,7 +65,7 @@
 {
     CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    CategoryDto *currentProductItem = _productList[indexPath.row];
+    CommonDto *currentProductItem = _productList[indexPath.row];
     
     //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
     //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];

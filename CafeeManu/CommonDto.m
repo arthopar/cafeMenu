@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Artak. All rights reserved.
 //
 
-#import "CategoryDto.h"
+#import "CommonDto.h"
 
-@implementation CategoryDto
+@implementation CommonDto
 
 @end
