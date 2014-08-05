@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+enum
+{
+    ARMENIAN_LANGUAGE = 0,
+    ENGLISH_LANGUAGE = 1,
+    RUSSIAN_LANGUAGE = 2,
+    
+} Language;
+
 @interface Localization : NSObject
 
++ (int) selectedLanguage;
++ (void) setSelectedLanguage:(int)val;
+
++(NSDictionary*) getLanguageList;
 @end
