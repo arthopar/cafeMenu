@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "Localization.h"
+#import "Constants.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Set default value for the language
+    NSDictionary* defaults = @{LANGUAGEKEY:@(ENGLISH_LANGUAGE)};
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
+    //Read the language value
+    NSInteger lang = [[NSUserDefaults standardUserDefaults] integerForKey:LANGUAGEKEY];
+    [Localization setSelectedLanguage:lang];
+    
     return YES;
 }
 							

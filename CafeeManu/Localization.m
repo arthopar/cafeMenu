@@ -7,6 +7,7 @@
 //
 
 #import "Localization.h"
+#import "Constants.h"
 
 @implementation Localization
 
@@ -23,6 +24,9 @@ static int selectedLanguage;
 {
     @synchronized(self) {
         selectedLanguage = val;
+        NSUserDefaults* userDef = [NSUserDefaults standardUserDefaults];
+        [userDef setInteger:val forKey:LANGUAGEKEY];
+        [userDef synchronize];
     }
 }
 

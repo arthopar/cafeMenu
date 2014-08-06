@@ -9,4 +9,4 @@
 #import "Constants.h"
 
 NSString* const SERVERROOT = @"http://arthopar.zapto.org/Menu/";
-
+NSString* const LANGUAGEKEY = @"AppLanguage";

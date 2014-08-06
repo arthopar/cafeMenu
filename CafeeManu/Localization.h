@@ -11,8 +11,8 @@
 enum
 {
     ARMENIAN_LANGUAGE = 0,
-    ENGLISH_LANGUAGE = 1,
-    RUSSIAN_LANGUAGE = 2,
+    RUSSIAN_LANGUAGE = 1,
+    ENGLISH_LANGUAGE = 2,
     
 } Language;
 
