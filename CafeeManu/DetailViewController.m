@@ -10,6 +10,7 @@
 #import "CommonDto.h"
 #import "CategoryCollectionViewCell.h"
 #import "CategoryViewController.h"
+#import "AddToCartViewController.h"
 
 @interface DetailViewController ()
 
@@ -95,5 +96,23 @@
 {
     [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)addProductAction:(UIButton *)sender {
+    AddToCartViewController *addToCartViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AddToCartViewController"];
+    addToCartViewController.modalPresentationStyle = UIModalPresentationFormSheet;
+    addToCartViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:addToCartViewController animated:YES completion:nil];
+    addToCartViewController.view.superview.bounds = CGRectMake(0, 0, 600, 400);
+    addToCartViewController.imageViewProduct.image = _imgProductLarg.image;
+}
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    UIViewController *source = [segue sourceViewController];
+//    UIViewController *dest = [segue destinationViewController];
+//    dest.view.center = source.view.center;
+//    source.modalPresentationStyle = UIModalPresentationFormSheet;
+//    if([[segue identifier] isEqualToString:@"ContactsViewControllerSegue"]){
+//    }
+//}
 
 @end

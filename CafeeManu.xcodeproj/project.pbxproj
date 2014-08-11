@@ -17,6 +17,7 @@
 		9892D2A21991626B0099E111 /* LanguageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892D2A11991626B0099E111 /* LanguageViewCell.m */; };
 		CE6EC0F219916CA000D2CC26 /* CommonDto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6EC0F119916CA000D2CC26 /* CommonDto.m */; };
 		CE9992E019901D70008267EA /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9992E219901D70008267EA /* localization.strings */; };
+		CE9F858F199783EC00AA908F /* AddToCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F858E199783EC00AA908F /* AddToCartViewController.m */; };
 		CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5E21986E73B001F66E0 /* DetailViewController.m */; };
 		CEB13A2C19915B6D00F99B4D /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB13A2B19915B6D00F99B4D /* Localization.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
@@ -97,6 +98,8 @@
 		CE6EC0F019916CA000D2CC26 /* CommonDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDto.h; path = CafeeManu/CommonDto.h; sourceTree = "<group>"; };
 		CE6EC0F119916CA000D2CC26 /* CommonDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonDto.m; path = CafeeManu/CommonDto.m; sourceTree = "<group>"; };
 		CE9992DD199004BB008267EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CE9F858D199783EC00AA908F /* AddToCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartViewController.h; sourceTree = "<group>"; };
+		CE9F858E199783EC00AA908F /* AddToCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartViewController.m; sourceTree = "<group>"; };
 		CEA9B5E11986E73B001F66E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CEA9B5E21986E73B001F66E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB13A211991554500F99B4D /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 				9878C38D198D171100BEB952 /* FeedbackViewController.m */,
 				9878C38F198D172500BEB952 /* InfoViewController.h */,
 				9878C390198D172500BEB952 /* InfoViewController.m */,
+				CE9F858D199783EC00AA908F /* AddToCartViewController.h */,
+				CE9F858E199783EC00AA908F /* AddToCartViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -588,6 +593,7 @@
 				CEB8D0D31986BB980000FCD4 /* UIButton+WebCache.m in Sources */,
 				CEB8D0D21986BB980000FCD4 /* SDWebImagePrefetcher.m in Sources */,
 				CEB8D0D81986BB980000FCD4 /* UIImageView+WebCache.m in Sources */,
+				CE9F858F199783EC00AA908F /* AddToCartViewController.m in Sources */,
 				CEB8D0CD1986BB980000FCD4 /* SDWebImageCompat.m in Sources */,
 				CEB8D0D41986BB980000FCD4 /* UIImage+GIF.m in Sources */,
 				CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */,

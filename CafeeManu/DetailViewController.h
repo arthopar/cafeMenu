@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgCalories;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMinutes;
+@property (weak, nonatomic) IBOutlet UIImageView *imgProductLarg;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 @property (weak, nonatomic) IBOutlet UIButton *btnEntree;
@@ -28,4 +29,6 @@
 @property (strong, nonatomic) NSMutableArray *productList;
 
 - (IBAction)backBtnClicked:(id)sender;
+- (IBAction)addProductAction:(UIButton *)sender;
+
 @end
