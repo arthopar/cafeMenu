@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol Localizable <NSObject>
+
+- (void) updateLocalizableTexts;
+
+@end
+
 @interface LanguagesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewLanguage;
+
 @property (strong, nonatomic) NSMutableArray *languages;
 
 @end

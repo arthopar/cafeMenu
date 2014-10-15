@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "LanguagesViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <Localizable>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnLanguage;
 @property (weak, nonatomic) IBOutlet UIButton *btnMenu;
@@ -20,4 +21,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelFeedback;
 @property (weak, nonatomic) IBOutlet UILabel *labelLanguage;
 
+@property (strong, nonatomic) UIPopoverController *popoverLanguage;
+
+- (IBAction)openLanguageAtion:(UIButton *)sender;
+
+- (void) updateLocalizableTexts;
 @end

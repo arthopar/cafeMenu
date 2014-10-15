@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "Localization.h"
+#import "LanguagesViewController.h"
 
 @interface MainViewController ()
 
@@ -61,7 +62,12 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self setLabels];
+    [self setLocalizedTexts];
+}
+
+- (void) updateLocalizableTexts
+{
+    [self setLocalizedTexts];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,19 +76,19 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) setLabels
+-(void) setLocalizedTexts
 {
-    _labelLanguage.text = [Localization languageSelectedStringForKey:@"XcN-Fg-dDM.text"];
+    _labelLanguage.text = [Localization languageSelectedStringForKey:@"language"];
+    _labelFeedback.text = [Localization languageSelectedStringForKey:@"feedback"];
+    _lableInfo.text = [Localization languageSelectedStringForKey:@"info"];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (IBAction)openLanguageAtion:(UIButton *)sender {
+    LanguagesViewController *languageViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"LanguagesViewController"];
+    _popoverLanguage = [[UIPopoverController alloc] initWithContentViewController:languageViewController];
+    [_popoverLanguage setPopoverContentSize:CGSizeMake(270, 270) animated:YES];
+    [_popoverLanguage presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionDown animated:YES];
+    
 }
-*/
-
 @end

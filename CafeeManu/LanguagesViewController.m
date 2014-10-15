@@ -72,6 +72,11 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor clearColor]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_languages count];
@@ -80,16 +85,11 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [Localization setSelectedLanguage:indexPath.row];
-}
-/*
-#pragma mark - Navigation
+    if ([self.presentingViewController conformsToProtocol:@protocol(Localizable) ]) {
+        [(UIViewController <Localizable> *)self.presentingViewController updateLocalizableTexts];
+    }
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+};
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

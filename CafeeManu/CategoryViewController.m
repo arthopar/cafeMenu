@@ -107,6 +107,8 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    detailViewController.productList = _categoryList;
+    
     [self presentViewController:detailViewController animated:YES completion:nil];
 }
 
