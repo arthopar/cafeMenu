@@ -245,12 +245,12 @@
 		CEA13C151989880D006C96C1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				9811F6501988447E00F79CE9 /* MainViewController.h */,
+				9811F6511988447E00F79CE9 /* MainViewController.m */,
 				2798D3971986DFC8007F860B /* CategoryViewController.h */,
 				2798D3981986DFC8007F860B /* CategoryViewController.m */,
 				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
 				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
-				9811F6501988447E00F79CE9 /* MainViewController.h */,
-				9811F6511988447E00F79CE9 /* MainViewController.m */,
 				9878C389198D15A600BEB952 /* LanguagesViewController.h */,
 				9878C38A198D15A600BEB952 /* LanguagesViewController.m */,
 				9878C38C198D171100BEB952 /* FeedbackViewController.h */,

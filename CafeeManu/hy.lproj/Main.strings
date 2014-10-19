@@ -43,3 +43,11 @@
 
 /* Class = "IBUILabel"; text = "Kofta Meatbal Sampler"; ObjectID = "wCp-6W-Sm0"; */
 "wCp-6W-Sm0.text" = "Kofta Meatbal Sampler";
+
+"info" = "Տեղեկատվություն";
+
+"feedback" = "Հետադարձ կապ";
+
+"language" = "Լեզու";
+
+"menu" = "մենյու";

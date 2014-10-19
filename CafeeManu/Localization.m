@@ -32,18 +32,16 @@ static int selectedLanguage;
 
 +(NSString*) languageSelectedStringForKey:(NSString*) key
 {
-    
-	NSString *path;
+	NSString *lang;
 	if(selectedLanguage == ENGLISH_LANGUAGE)
-		path = [[NSBundle mainBundle] pathForResource:@"English" ofType:@"lproj"];
+		lang = @"en";
 	else if(selectedLanguage == ARMENIAN_LANGUAGE)
-		path = [[NSBundle mainBundle] pathForResource:[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0]  ofType:@"lproj"];
+		lang = @"hy";
 	else if(selectedLanguage == RUSSIAN_LANGUAGE)
-		path = [[NSBundle mainBundle] pathForResource:@"ru" ofType:@"lproj"];
+		lang = @"ru";
 	
-	NSBundle* languageBundle = [NSBundle bundleWithPath:path];
-    [languageBundle load];
-	NSString* str=[languageBundle localizedStringForKey:key value:@"" table:nil];
+    NSBundle *languageResourcesBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:lang ofType:@"lproj"]];
+    NSString* str= NSLocalizedStringFromTableInBundle(key, @"localization", languageResourcesBundle, nil);
 	return str;
 }
 
