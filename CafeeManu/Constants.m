@@ -8,5 +8,5 @@
 
 #import "Constants.h"
 
-NSString* const SERVERROOT = @"http://arthopar.zapto.org/Menu/";
+NSString* const SERVERROOT = @"http://100.81.150.132:8080/Menu/servlet/";
 NSString* const LANGUAGEKEY = @"AppLanguage";

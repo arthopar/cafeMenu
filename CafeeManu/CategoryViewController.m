@@ -12,7 +12,9 @@
 #import "DetailViewController.h"
 #import "ServerInterface.h"
 #import "Constants.h"
-
+#import "ResponseList.h"
+#import "CategoryDto.h"
+#import "UIImageView+WebCache.h"
 
 @implementation CategoryViewController
 
@@ -28,51 +30,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getCategories];
+    
+    __weak id weak_self = self;
+    [ServerInterface getCategoryListForCallback:^(ResponseList* data) {
+        [weak_self requestFinishedWithData:data];
+    }];
 }
 
--(void) getCategories
+-(void) requestFinishedWithData:(ResponseList*)data
 {
-    _categoryList = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < 20; ++i) {
-        CommonDto *productCellData = [[CommonDto alloc] init];
-        productCellData.imagePath = @"entree.png";
-        productCellData.name = @"Entree";
-        [_categoryList addObject:productCellData];
-    
-        productCellData = [[CommonDto alloc] init];
-        productCellData.imagePath = @"sushi.png";
-        productCellData.name = @"Sushi";
-        [_categoryList addObject:productCellData];
+    if (data.isSuccess) {
+        _categoryList = data.dataList;
+        [_collectionView reloadData];
+    } else {
+        //TODO error message
     }
 }
 
-// TODO Uncomment when the server will be available
-//-(void) getCategories
-//{
-//    _categoryList = [[NSMutableArray alloc] init];
-//    
-//    [ServerInterface requestWithData:@"Category" parameters:nil success:^(id responseObject) {
-//        NSLog(@"JSON: %@", responseObject);
-//        if ([responseObject isKindOfClass:[NSArray class]]) {
-//            NSArray *responseArray = responseObject;
-//            for (NSDictionary *currenCategory in responseArray) {
-//                CategoryDto *currentCellData = [[CategoryDto alloc] init];
-//                currentCellData.imagePath = [currenCategory valueForKey:@"imagePath"];
-//                currentCellData.imagePath = [SERVERROOT stringByAppendingString:currentCellData.imagePath];
-//                currentCellData.name = [currenCategory valueForKey:@"name"];
-//                [_categoryList addObject:currentCellData];
-//            }
-//            [_collectionView reloadData];
-//        } else if ([responseObject isKindOfClass:[NSDictionary class]]) {
-//            //NSDictionary *responseDict = responseObject;
-//            /* do something with responseDict */
-//        }
-//    } failure:^(NSError *error) {
-//        NSLog(@"Error: %@", error);
-//    }];
-//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -81,6 +55,7 @@
         
     }
 }
+
 #pragma mark - UICollectionViewDataSource Methods
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -91,15 +66,11 @@
 {
     CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    CommonDto *currentProductItem = _categoryList[indexPath.row];
-    
-    //  NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
-    //	NSURL *imageUrl = [NSURL URLWithString: currentCategoryItem.imagePath];
-    //  [cell.imageView sd_setImageWithURL:imageUrl];
-//    [cell.imageView setImage:[UIImage imageNamed:currentProductItem.imagePath]];
-    [cell.imageView setImage:[UIImage imageNamed:@"harisa"]];
+    CategoryDto *currentCategoryDto = _categoryList[indexPath.row];
 
-    [cell.nameLbl setText:currentProductItem.name];
+    NSURL *url = [NSURL URLWithString:currentCategoryDto.imagePath];
+    [cell.imageView sd_setImageWithURL: url];
+    [cell.nameLbl setText:currentCategoryDto.name];
     
     return cell;
 }

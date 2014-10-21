@@ -10,6 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class ResponseList;
+
 @interface ServerInterface : NSObject
 
 + (void)requestWithData:(NSString*)data
@@ -17,4 +19,5 @@
                         success:(void (^)(id responseObject))success
                         failure:(void (^)(NSError *error))failure;
 
++(void) getCategoryListForCallback:(void (^)(ResponseList*))callback;
 @end

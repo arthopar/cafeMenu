@@ -15,6 +15,8 @@
 		9878C38E198D171100BEB952 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878C38D198D171100BEB952 /* FeedbackViewController.m */; };
 		9878C391198D172500BEB952 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9878C390198D172500BEB952 /* InfoViewController.m */; };
 		9892D2A21991626B0099E111 /* LanguageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892D2A11991626B0099E111 /* LanguageViewCell.m */; };
+		CE2A153419F460E700321F7F /* CategoryDto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A153319F460E700321F7F /* CategoryDto.m */; };
+		CE2A153819F4618200321F7F /* ResponseList.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A153719F4618200321F7F /* ResponseList.m */; };
 		CE6EC0F219916CA000D2CC26 /* CommonDto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6EC0F119916CA000D2CC26 /* CommonDto.m */; };
 		CE9992E019901D70008267EA /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9992E219901D70008267EA /* localization.strings */; };
 		CE9F858F199783EC00AA908F /* AddToCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F858E199783EC00AA908F /* AddToCartViewController.m */; };
@@ -93,6 +95,10 @@
 		9878C390198D172500BEB952 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		9892D2A01991626B0099E111 /* LanguageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageViewCell.h; sourceTree = "<group>"; };
 		9892D2A11991626B0099E111 /* LanguageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageViewCell.m; sourceTree = "<group>"; };
+		CE2A153219F460E700321F7F /* CategoryDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDto.h; sourceTree = "<group>"; };
+		CE2A153319F460E700321F7F /* CategoryDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDto.m; sourceTree = "<group>"; };
+		CE2A153619F4618200321F7F /* ResponseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseList.h; sourceTree = "<group>"; };
+		CE2A153719F4618200321F7F /* ResponseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseList.m; sourceTree = "<group>"; };
 		CE6EC0F019916CA000D2CC26 /* CommonDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDto.h; path = CafeeManu/CommonDto.h; sourceTree = "<group>"; };
 		CE6EC0F119916CA000D2CC26 /* CommonDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonDto.m; path = CafeeManu/CommonDto.m; sourceTree = "<group>"; };
 		CE9992DD199004BB008267EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -221,11 +227,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2A153519F4615300321F7F /* ServerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CEB8D1111986BBB80000FCD4 /* ServerInterface.h */,
+				CEB8D1121986BBB80000FCD4 /* ServerInterface.m */,
+				CE2A153619F4618200321F7F /* ResponseList.h */,
+				CE2A153719F4618200321F7F /* ResponseList.m */,
+			);
+			name = ServerAPI;
+			sourceTree = "<group>";
+		};
 		CEA13C13198987E9006C96C1 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				CE6EC0F019916CA000D2CC26 /* CommonDto.h */,
 				CE6EC0F119916CA000D2CC26 /* CommonDto.m */,
+				CE2A153219F460E700321F7F /* CategoryDto.h */,
+				CE2A153319F460E700321F7F /* CategoryDto.m */,
 			);
 			name = model;
 			path = ..;
@@ -296,13 +315,12 @@
 		CEB8D0791986B9250000FCD4 /* CafeeManu */ = {
 			isa = PBXGroup;
 			children = (
+				CE2A153519F4615300321F7F /* ServerAPI */,
 				CEA13C151989880D006C96C1 /* controller */,
 				CEA13C1419898806006C96C1 /* view */,
 				CEA13C13198987E9006C96C1 /* model */,
 				CEB8D1151986BC280000FCD4 /* Constants.h */,
 				CEB8D1161986BC280000FCD4 /* Constants.m */,
-				CEB8D1111986BBB80000FCD4 /* ServerInterface.h */,
-				CEB8D1121986BBB80000FCD4 /* ServerInterface.m */,
 				CEB8D0821986B9250000FCD4 /* AppDelegate.h */,
 				CEB8D0831986B9250000FCD4 /* AppDelegate.m */,
 				CEB13A2A19915B6D00F99B4D /* Localization.h */,
@@ -532,6 +550,7 @@
 				CEB8D0D71986BB980000FCD4 /* UIImageView+HighlightedWebCache.m in Sources */,
 				CEB8D0CB1986BB980000FCD4 /* NSData+ImageContentType.m in Sources */,
 				CEB8D1131986BBB80000FCD4 /* ServerInterface.m in Sources */,
+				CE2A153819F4618200321F7F /* ResponseList.m in Sources */,
 				CEB8D0D11986BB980000FCD4 /* SDWebImageManager.m in Sources */,
 				CEB8D0CF1986BB980000FCD4 /* SDWebImageDownloader.m in Sources */,
 				CEB13A2C19915B6D00F99B4D /* Localization.m in Sources */,
@@ -555,6 +574,7 @@
 				CEB8D0CE1986BB980000FCD4 /* SDWebImageDecoder.m in Sources */,
 				CEB8D0D51986BB980000FCD4 /* UIImage+MultiFormat.m in Sources */,
 				CEB8D1011986BBAC0000FCD4 /* AFHTTPRequestOperationManager.m in Sources */,
+				CE2A153419F460E700321F7F /* CategoryDto.m in Sources */,
 				CEB8D1101986BBAC0000FCD4 /* UIWebView+AFNetworking.m in Sources */,
 				9811F6521988447E00F79CE9 /* MainViewController.m in Sources */,
 				2798D3991986DFC8007F860B /* CategoryViewController.m in Sources */,
