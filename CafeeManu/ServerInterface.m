@@ -13,6 +13,7 @@
 
 #import "Constants.h"
 #import "CategoryDto.h"
+#import "ProductDto.h"
 #import "ResponseList.h"
 
 
@@ -20,6 +21,17 @@
 
 static NSString *PRODUCT = @"Product";
 static NSString *CATEGORY = @"Category";
+
+static NSString *IMAGE_PATH = @"imagePath";
+static NSString *NAME = @"name";
+static NSString *ID = @"id";
+static NSString *CATEGORY_ID = @"categoryId";
+static NSString *PRODUCT_ID = @"productId";
+static NSString *DESCRYPTION = @"description";
+static NSString *RAITING = @"raiting";
+static NSString *MINUTES = @"minutes";
+static NSString *CALORRIES = @"calories";
+static NSString *PRICE = @"price";
 
 +(void)requestWithData:(NSString*)data
                         parameters:(id)parameters
@@ -48,9 +60,44 @@ static NSString *CATEGORY = @"Category";
             NSArray *responseArray = responseObject;
             for (NSDictionary *currenCategory in responseArray) {
                 CategoryDto *categoryDto = [[CategoryDto alloc] init];
-                categoryDto.imagePath = [currenCategory valueForKey:@"imagePath"];//TODO [SERVERROOT stringByAppendingString:[currenCategory valueForKey:@"imagePath"]];
-                categoryDto.name = [currenCategory valueForKey:@"name"];
+                categoryDto.imagePath = [currenCategory valueForKey:IMAGE_PATH];//TODO [SERVERROOT stringByAppendingString:[currenCategory valueForKey:@"imagePath"]];
+                categoryDto.name = [currenCategory valueForKey:NAME];
+                categoryDto._id = [[currenCategory valueForKey:ID] integerValue];
                 [responseList.dataList addObject:categoryDto];
+            }
+            responseList.isSuccess = YES;
+        }
+        callback(responseList);
+    } failure:^(NSError *error) {
+        ResponseList *responseList = [[ResponseList alloc] init];
+        responseList.isSuccess = NO;
+        responseList.errorMessage =  [error description];
+        callback(responseList);
+    }];
+}
+
++(void) getProductListForCallback:(void (^)(ResponseList*))callback
+{
+    [ServerInterface requestWithData:PRODUCT parameters:nil success:^(id responseObject) {
+        
+        ResponseList *responseList = [[ResponseList alloc] init];
+        
+        
+        if ([responseObject isKindOfClass:[NSArray class]]) {
+            NSArray *responseArray = responseObject;
+            for (NSDictionary *currenCategory in responseArray) {
+                ProductDto *productDto = [[ProductDto alloc] init];
+                productDto.imagePath = [currenCategory valueForKey:IMAGE_PATH];//TODO [SERVERROOT stringByAppendingString:[currenCategory valueForKey:@"imagePath"]];
+                productDto._id = [currenCategory valueForKey:PRODUCT_ID];
+                productDto.categoryId = [currenCategory valueForKey:CATEGORY_ID];
+                productDto.name = [currenCategory valueForKey:NAME];
+                productDto.calories = [[currenCategory valueForKey:CALORRIES] integerValue];
+                productDto.minutes = [[currenCategory valueForKey:MINUTES] integerValue];
+                productDto.price = [[currenCategory valueForKey:PRICE] integerValue];
+                productDto.descyption = [currenCategory valueForKey:DESCRYPTION];
+                productDto.raiting = [[currenCategory valueForKey:RAITING] doubleValue];
+                
+                [responseList.dataList addObject:productDto];
             }
             responseList.isSuccess = YES;
         }

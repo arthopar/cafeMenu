@@ -10,6 +10,7 @@
 
 @interface CategoryDto : NSObject
 
+@property (nonatomic) NSInteger _id;
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) NSString *name;
 

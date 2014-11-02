@@ -20,4 +20,6 @@
                         failure:(void (^)(NSError *error))failure;
 
 +(void) getCategoryListForCallback:(void (^)(ResponseList*))callback;
++(void) getProductListForCallback:(void (^)(ResponseList*))callback;
+
 @end

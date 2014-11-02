@@ -1,22 +1,26 @@
 //
-//  CategoryViewController.m
+//  ProductViewController.m
 //  CafeeManu
 //
-//  Created by Edvard on 7/28/14.
+//  Created by Artak on 10/22/14.
 //  Copyright (c) 2014 Artak. All rights reserved.
 //
 
-#import "CategoryViewController.h"
+#import "ProductViewController.h"
 #import "CommonDto.h"
 #import "CategoryCollectionViewCell.h"
-#import "ProductViewController.h"
+#import "DetailViewController.h"
 #import "ServerInterface.h"
 #import "Constants.h"
 #import "ResponseList.h"
-#import "CategoryDto.h"
+#import "ProductDto.h"
 #import "UIImageView+WebCache.h"
 
-@implementation CategoryViewController
+@interface ProductViewController ()
+
+@end
+
+@implementation ProductViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,10 +36,21 @@
     [super viewDidLoad];
     
     __weak id weak_self = self;
-    [ServerInterface getCategoryListForCallback:^(ResponseList* data) {
+    [ServerInterface getProductListForCallback:^(ResponseList* data) {
         [weak_self requestFinishedWithData:data];
     }];
 }
+
+-(void) requestFinishedWithData:(ResponseList*)data
+{
+    if (data.isSuccess) {
+        _productList = data.dataList;
+        [_collectionView reloadData];
+    } else {
+        //TODO error message
+    }
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -44,19 +59,6 @@
         
     }
 }
-
-#pragma mark - request callback
-
--(void) requestFinishedWithData:(ResponseList*)data
-{
-    if (data.isSuccess) {
-        _categoryList = data.dataList;
-        [_collectionView reloadData];
-    } else {
-        //TODO error message
-    }
-}
-
 
 #pragma mark - UICollectionViewDataSource Methods
 
@@ -68,21 +70,21 @@
 {
     CategoryCollectionViewCell *cell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"CategoryCollectionViewCell" forIndexPath:indexPath];
     
-    CategoryDto *currentCategoryDto = _categoryList[indexPath.row];
-
-    NSURL *url = [NSURL URLWithString:currentCategoryDto.imagePath];
+    ProductDto *currentProductDto= _productList[indexPath.row];
+    
+    NSURL *url = [NSURL URLWithString:currentProductDto.imagePath];
     [cell.imageView sd_setImageWithURL: url];
-    [cell.nameLbl setText:currentCategoryDto.name];
+    [cell.nameLbl setText:currentProductDto.name];
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProductViewController *productViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductViewController"];
-    productViewController.productList = _categoryList;
+    DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    detailViewController.productList = _productList;
     
-    [self presentViewController:productViewController animated:YES completion:nil];
+    [self presentViewController:detailViewController animated:YES completion:nil];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -90,7 +92,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_categoryList count];
+    return [_productList count];
 }
 
 - (void)didReceiveMemoryWarning

@@ -20,6 +20,8 @@
 		CE6EC0F219916CA000D2CC26 /* CommonDto.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6EC0F119916CA000D2CC26 /* CommonDto.m */; };
 		CE9992E019901D70008267EA /* localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9992E219901D70008267EA /* localization.strings */; };
 		CE9F858F199783EC00AA908F /* AddToCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F858E199783EC00AA908F /* AddToCartViewController.m */; };
+		CEA4A18919F6F5A20092756B /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA4A18819F6F5A20092756B /* ProductViewController.m */; };
+		CEA4A18C19F6F9AF0092756B /* ProductDto.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA4A18B19F6F9AF0092756B /* ProductDto.m */; };
 		CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA9B5E21986E73B001F66E0 /* DetailViewController.m */; };
 		CEB13A2C19915B6D00F99B4D /* Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB13A2B19915B6D00F99B4D /* Localization.m */; };
 		CEB8D0741986B9250000FCD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB8D0731986B9250000FCD4 /* Foundation.framework */; };
@@ -104,6 +106,10 @@
 		CE9992DD199004BB008267EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CE9F858D199783EC00AA908F /* AddToCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToCartViewController.h; sourceTree = "<group>"; };
 		CE9F858E199783EC00AA908F /* AddToCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToCartViewController.m; sourceTree = "<group>"; };
+		CEA4A18719F6F5A20092756B /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		CEA4A18819F6F5A20092756B /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		CEA4A18A19F6F9AF0092756B /* ProductDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDto.h; sourceTree = "<group>"; };
+		CEA4A18B19F6F9AF0092756B /* ProductDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDto.m; sourceTree = "<group>"; };
 		CEA9B5E11986E73B001F66E0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CEA9B5E21986E73B001F66E0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB13A211991554500F99B4D /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
@@ -245,6 +251,8 @@
 				CE6EC0F119916CA000D2CC26 /* CommonDto.m */,
 				CE2A153219F460E700321F7F /* CategoryDto.h */,
 				CE2A153319F460E700321F7F /* CategoryDto.m */,
+				CEA4A18A19F6F9AF0092756B /* ProductDto.h */,
+				CEA4A18B19F6F9AF0092756B /* ProductDto.m */,
 			);
 			name = model;
 			path = ..;
@@ -268,6 +276,8 @@
 				9811F6511988447E00F79CE9 /* MainViewController.m */,
 				2798D3971986DFC8007F860B /* CategoryViewController.h */,
 				2798D3981986DFC8007F860B /* CategoryViewController.m */,
+				CEA4A18719F6F5A20092756B /* ProductViewController.h */,
+				CEA4A18819F6F5A20092756B /* ProductViewController.m */,
 				CEA9B5E11986E73B001F66E0 /* DetailViewController.h */,
 				CEA9B5E21986E73B001F66E0 /* DetailViewController.m */,
 				9878C389198D15A600BEB952 /* LanguagesViewController.h */,
@@ -564,6 +574,7 @@
 				2798D39F1986ED1D007F860B /* CategoryCollectionViewCell.m in Sources */,
 				CE6EC0F219916CA000D2CC26 /* CommonDto.m in Sources */,
 				CEB8D0D61986BB980000FCD4 /* UIImage+WebP.m in Sources */,
+				CEA4A18919F6F5A20092756B /* ProductViewController.m in Sources */,
 				CEB8D1021986BBAC0000FCD4 /* AFHTTPSessionManager.m in Sources */,
 				CEB8D0D91986BB980000FCD4 /* UIView+WebCacheOperation.m in Sources */,
 				CEB8D0CC1986BB980000FCD4 /* SDImageCache.m in Sources */,
@@ -592,6 +603,7 @@
 				CE9F858F199783EC00AA908F /* AddToCartViewController.m in Sources */,
 				CEB8D0CD1986BB980000FCD4 /* SDWebImageCompat.m in Sources */,
 				CEB8D0D41986BB980000FCD4 /* UIImage+GIF.m in Sources */,
+				CEA4A18C19F6F9AF0092756B /* ProductDto.m in Sources */,
 				CEA9B5E31986E73B001F66E0 /* DetailViewController.m in Sources */,
 				CEB8D10D1986BBAC0000FCD4 /* UIImageView+AFNetworking.m in Sources */,
 				CEB8D0801986B9250000FCD4 /* main.m in Sources */,
