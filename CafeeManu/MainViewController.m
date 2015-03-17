@@ -81,6 +81,7 @@
     _labelLanguage.text = [Localization languageSelectedStringForKey:@"language"];
     _labelFeedback.text = [Localization languageSelectedStringForKey:@"feedback"];
     _lableInfo.text = [Localization languageSelectedStringForKey:@"info"];
+    [_btnMenu setTitle:[Localization languageSelectedStringForKey:@"menu"] forState:UIControlStateNormal];
 }
 
 
